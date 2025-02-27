@@ -1,0 +1,103 @@
+:root{
+    --salmon:#EF9D71 ;
+    --black: #000;
+    --white: #fff;
+    --cyan: #AEDEE0;
+    --dsalmon: #532521;
+    --dcyan: #000000;
+}
+.logo h1 , .footerh1{
+    font-family: "Playwrite HR Lijeva", cursive;
+}
+
+body{
+    transition: background-color ease-out .5s;
+}
+
+.vdodiv{
+    clip-path:circle(var(--clip)at 50% 50%);
+}
+
+body[theme="black"]{
+    background-color:var(--black)
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+
+
+body[theme="cyan"] {
+    background-color:var(--cyan);
+}
+body[theme="cyan"] .section{
+    color:var(--dcyan);
+}
+
+
+body[theme="salmon"]{
+    background-color:var(--salmon);
+}
+body[theme="salmon"] .section{
+    color:var(--dsalmon);
+}
+
+
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .section{
+    color: var(--black);
+}
+
+*{
+    font-family: "Space Grotesk", sans-serif;
+    /* font-family: "Pp_Neue_Machina", sans-serif; */
+}
+
+.ltextP{
+    font-family: "Roboto", sans-serif
+}
+
+/* png image animation */
+.movImg{
+    animation: myfirst 7s infinite linear;
+}
+
+@keyframes myfirst{
+    0%{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform:translate(-50%,-50%)rotate(360deg);
+    }
+}
+
+.fSocial i{
+    font-size:4vh;
+}
+
+.footerh1{
+    transform: translateY(100%); /* Start off-screen (below the container) */
+      white-space: nowrap; /* Prevent text from wrapping */
+      animation:4s
+    }
+
+.myText{
+    transform: translateX(-100%); /* Start off-screen (to the left) */
+    white-space: nowrap;
+}
+
+.repo{
+    background-color: #AEDEE0;
+      transition: background-color 0.3s ease;
+}
+
+.listelem {
+    transition: background-color 0.5s ease, transform 0.3s ease;
+  }
+
+  .listelem:hover {
+    background-color: grey; /* Change to blue on hover */
+    color: white; /* Change text color */
+    transform: scale(1.05); 
+  }
